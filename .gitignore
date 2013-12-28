@@ -1,0 +1,8 @@
+# Precompiled python files
+*.pyc
+
+# Database files
+*.db
+
+# Media files
+media/
