@@ -33,7 +33,7 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 100;
+	z-index: 500;
 	.logo {
 		margin: 10px;
 	}
@@ -69,7 +69,7 @@ header {
 }
 
 section.slider {
-	#home {
+	#home-slider {
 		height: 100%
 	}
 }
@@ -85,6 +85,7 @@ section.who-we-are {
 	background-repeat: no-repeat;
 	height: 470px;
 	position: relative;
+	overflow: hidden;
 
 	h2 {
 		font-size: 44px;
@@ -99,13 +100,13 @@ section.who-we-are {
 	.headshots {
 		position: relative;
 		margin-top: 30px;
+		z-index: 0;
 		.photo {
 			width: 52px;
 			height: 52px;
 			background: gray;
-			float: left;
-			margin-left: 15px;
 			overflow: hidden;
+			position: absolute;
 
 			.fb-photo {
 				margin: 1px;
@@ -129,18 +130,23 @@ section.who-we-are {
 			}
 			&.red {
 				background-color: @red;
+				left: 60px;
 			}
 			&.yellow {
 				background-color: @yellow;
+				left: 120px;
 			}
 			&.light-green {
 				background-color: @light_green;
+				left: 180px;
 			}
 			&.green {
 				background-color: @green;
+				left: 240px;
 			}
 			&.blue {
 				background-color: @blue;
+				left: 300px;
 			}
 			&.pink {
 				background-color: @pink;
@@ -210,4 +216,26 @@ section.who-we-are {
 .container {
 	width: 1200px;
 	margin: 0 auto;
+}
+
+.anchor {
+	position: relative;
+	visibility: none;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	display: block;
+}
+
+.fantasy {
+	background-image: url(../img/fantasy.jpg);
+	background-size: cover;
+}
+.megan1 {
+	background-image: url(../img/megan1.jpg);
+	background-size: cover;
+}
+.megan2 {
+	background-image: url(../img/megan2.jpg);
+	background-size: cover;
 }
