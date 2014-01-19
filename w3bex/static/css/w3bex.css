@@ -1,4 +1,28 @@
-html,body{background-color:#1a1a1a;height:100%;font-family:'Open Sans',Arial,sans-serif;}html a,body a{text-decoration:none;}
-header{background-color:#0d0d0d;}header .logo{margin:10px;}
-header nav{float:right;}header nav ul{list-style:none;margin:0;padding:0;height:51px;}header nav ul li{display:inline;line-height:51px;}header nav ul li a{font-size:20px;color:#4d4d4d;padding:0 20px;display:inline-block;height:51px;}
+body{background-color:#1a1a1a;height:100%;font-family:'Open Sans',Arial,sans-serif;padding-top:51px;}body a{text-decoration:none;}
+h1,h2,h3{font-weight:lighter;color:#55d400;}
+p{color:gray;}
+header{background-color:#0d0d0d;position:fixed;width:100%;top:0;z-index:100;}header .logo{margin:10px;}
+header nav{float:right;}header nav ul{list-style:none;margin:0;padding:0;height:51px;}header nav ul li{display:inline;line-height:51px;}header nav ul li a{font-size:20px;color:#676767;padding:0 20px;display:inline-block;height:51px;transition:color 0.5s ease-in-out;}header nav ul li a:hover{color:#55d400;}
 header nav ul li.active a{color:#55d400;}
+section.slider #home{height:100%;}
+section.testing-parallax{height:400px;background-color:#333;}
+section.who-we-are{background-image:url(../img/w3bex-land.png);background-position:bottom center;background-repeat:no-repeat;height:470px;position:relative;}section.who-we-are h2{font-size:44px;margin:10px 0;padding-top:70px;}
+section.who-we-are p{font-size:19px;max-width:500px;margin:0;}
+section.who-we-are .headshots{position:relative;margin-top:30px;}section.who-we-are .headshots .photo{width:52px;height:52px;background:gray;float:left;margin-left:15px;overflow:hidden;}section.who-we-are .headshots .photo .fb-photo{margin:1px;position:relative;opacity:0;transition:opacity 0.3s ease-in-out;}
+section.who-we-are .headshots .photo:first-child{margin-left:0;}section.who-we-are .headshots .photo:first-child .fb-photo{margin:2px;}
+section.who-we-are .headshots .photo:hover .fb-photo{opacity:1;}
+section.who-we-are .headshots .photo.orange{background-color:#ff6600;}
+section.who-we-are .headshots .photo.red{background-color:#ff2a2a;}
+section.who-we-are .headshots .photo.yellow{background-color:#ffcc00;}
+section.who-we-are .headshots .photo.light-green{background-color:#aad400;}
+section.who-we-are .headshots .photo.green{background-color:#55d400;}
+section.who-we-are .headshots .photo.blue{background-color:#0099ff;}
+section.who-we-are .headshots .photo.pink{background-color:#ff00dd;}
+section.who-we-are .cloud1{width:195px;height:114px;background-image:url(../img/cloud1.png);background-repeat:no-repeat;position:absolute;right:500px;top:20px;transition:right 100s ease-out;z-index:100;}
+section.who-we-are .cloud2{width:137px;height:89px;background-image:url(../img/cloud2.png);background-repeat:no-repeat;position:absolute;right:100px;top:60px;z-index:100;transition:right 120s ease-out;}
+section.who-we-are .sun{width:90px;height:90px;background-image:url(../img/sun.png);background-repeat:no-repeat;position:absolute;right:400px;top:10px;z-index:50;}
+section.who-we-are .sat{width:74px;height:52px;background-image:url(../img/sat.png);background-repeat:no-repeat;position:absolute;right:900px;top:25px;z-index:50;transition:right 400s ease-out;}
+section.who-we-are.play .cloud1{right:100px;}
+section.who-we-are.play .cloud2{right:500px;}
+section.who-we-are.play .sat{right:0;}
+.container{width:1200px;margin:0 auto;}

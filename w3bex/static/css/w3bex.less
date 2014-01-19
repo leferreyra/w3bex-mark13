@@ -1,20 +1,39 @@
 
 @background: #1a1a1a;
-@green: #55d400;
-@pink: #ff0066;
 
-html, body {
+@green: #55d400;
+@pink: #ff00dd;
+@orange: #ff6600;
+@red: #ff2a2a;
+@yellow: #ffcc00;
+@light_green: #aad400;
+@blue: #0099ff;
+
+body {
 	background-color: @background;
 	height: 100%;
 	font-family: 'Open Sans', Arial, sans-serif;
-
+	padding-top: 51px;
 	a {
 		text-decoration: none;
 	}
 }
 
+h1, h2, h3 {
+	font-weight: lighter;
+	color: @green;
+}
+
+p {
+	color: gray;
+}
+
 header {
 	background-color: darken(@background, 5%);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
 	.logo {
 		margin: 10px;
 	}
@@ -30,10 +49,14 @@ header {
 				line-height: 51px;
 				a {
 					font-size: 20px;
-					color: lighten(@background, 20%);
+					color: lighten(@background, 30%);
 					padding: 0 20px;
 					display: inline-block;
 					height: 51px;
+					transition: color 0.5s ease-in-out;
+					&:hover {
+						color: @green;
+					}
 				}
 				&.active {
 					a {
@@ -45,3 +68,146 @@ header {
 	}
 }
 
+section.slider {
+	#home {
+		height: 100%
+	}
+}
+
+section.testing-parallax {
+	height: 400px;
+	background-color: #333;
+}
+
+section.who-we-are {
+	background-image: url(../img/w3bex-land.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	height: 470px;
+	position: relative;
+
+	h2 {
+		font-size: 44px;
+		margin: 10px 0;
+		padding-top: 70px;
+	}
+	p {
+		font-size: 19px;
+		max-width: 500px;
+		margin: 0;
+	}
+	.headshots {
+		position: relative;
+		margin-top: 30px;
+		.photo {
+			width: 52px;
+			height: 52px;
+			background: gray;
+			float: left;
+			margin-left: 15px;
+			overflow: hidden;
+
+			.fb-photo {
+				margin: 1px;
+				position: relative;
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+			}
+			&:first-child {
+				margin-left: 0;
+				.fb-photo {
+					margin: 2px;
+				}
+			}
+			&:hover {
+				.fb-photo {
+					opacity: 1;
+				}
+			}
+			&.orange {
+				background-color: @orange;
+			}
+			&.red {
+				background-color: @red;
+			}
+			&.yellow {
+				background-color: @yellow;
+			}
+			&.light-green {
+				background-color: @light_green;
+			}
+			&.green {
+				background-color: @green;
+			}
+			&.blue {
+				background-color: @blue;
+			}
+			&.pink {
+				background-color: @pink;
+			}
+		}
+	}
+	.cloud1 {
+		width: 195px;
+		height: 114px;
+		background-image: url(../img/cloud1.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 500px;
+		top: 20px;
+
+		transition: right 100s ease-out;
+		z-index: 100;
+	}
+	.cloud2 {
+		width: 137px;
+		height: 89px;
+		background-image: url(../img/cloud2.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 100px;
+		top: 60px;
+		z-index: 100;
+
+		transition: right 120s ease-out;
+	}
+	.sun {
+		width: 90px;
+		height: 90px;
+		background-image: url(../img/sun.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 400px;
+		top: 10px;
+		z-index: 50;
+	}
+	.sat {
+		width: 74px;
+		height: 52px;
+		background-image: url(../img/sat.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 900px;
+		top: 25px;
+		z-index: 50;
+
+		transition: right 400s ease-out;
+	}
+	&.play {
+		.cloud1 {
+			right: 100px;
+		}
+		.cloud2 {
+			right: 500px;
+		}
+		.sat {
+			right: 0;
+		}
+	}
+}
+
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
