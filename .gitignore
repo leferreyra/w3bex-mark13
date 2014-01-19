@@ -1,8 +1,13 @@
 # Precompiled python files
 *.pyc
+*.log
+*.pot
 
 # Database files
 *.db
 
 # Media files
 media/
+
+# Settings files
+local_settings.py
