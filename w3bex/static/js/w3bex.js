@@ -34,8 +34,19 @@ w3bex.init = function(){
 
 w3bex.recalculateOffsets = function(){
 	$('.anchor').each(function(idx, el){
-		offset = -(25 + ((window.innerHeight - $(el).next().height())/2));
+
+		win_height = window.innerHeight;
+		section = $(el).next();
+
+		// When the section element is larger, do not calculate offset
+		if (section.height() <= win_height){
+			offset = -(25 + (( win_height - section.height())/2));
+		}else{
+			offset = -51;
+		}
 		$(el).css('top', offset);
+
+		// Calculate parallax offset, need a way to reinitialize stellar instance
 		parallax_offset = Math.floor(46 + ((window.innerHeight - $(el).next().height())/2));
 		$(el).next().attr('data-stellar-vertical-offset', parallax_offset);
 	})
